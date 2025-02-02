@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Nico Moji';
+    src: url('../fonts/Nico-Moji/NicoMoji-Regular.woff2') format('woff2'),
+        url('../fonts/Nico-Moji/NicoMoji-Regular.woff') format('woff'),
+        url('../fonts/Nico-Moji/NicoMoji-Regular.ttf') format('truetype'),
+        url('../fonts/Nico-Moji/NicoMoji-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'NEXTART';
+	src: url('../fonts/Nextart/nextart.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/Nextart/nextart.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/Nextart/nextart.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/Nextart/nextart.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/Nextart/nextart.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/Nextart/nextart.svg#nextart') format('svg'); /* Chrome < 4, Legacy iOS */
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;		
+}
+
+@font-face {
+    font-family: 'NEXTART-bold';
+    src: url('../fonts/Nextart/NEXTART-Bold.eot');
+    src: url('../fonts/Nextart/NEXTART-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Nextart/NEXTART-Bold.woff2') format('woff2'),
+        url('../fonts/Nextart/NEXTART-Bold.woff') format('woff'),
+        url('../fonts/Nextart/NEXTART-Bold.svg#NEXTART-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NEXTART-semibold';
+    src: url('../fonts/Nextart/NEXTART-SemiBold.eot');
+    src: url('../fonts/Nextart/NEXTART-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Nextart/NEXTART-SemiBold.woff2') format('woff2'),
+        url('../fonts/Nextart/NEXTART-SemiBold.woff') format('woff'),
+        url('../fonts/Nextart/NEXTART-SemiBold.svg#NEXTART-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arodora Pro';
+	src: url('../fonts/Arodorapro/ArodoraPro-Light.otf') format('opentype');
+    src: url('../fonts/Arodorapro/Arodora Pro Light.woff2') format('woff2'),
+        url('../fonts/Arodorapro/Arodora Pro Light.woff') format('woff'),
+        url('../fonts/Arodorapro/ArodoraPro-Light.ttf') format('truetype'),
+		url('../fonts/Arodorapro/ArodoraPro-Light.svg') format('svg'),
+        url('../fonts/Arodorapro/ArodoraPro-Light.svg#ArodoraPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

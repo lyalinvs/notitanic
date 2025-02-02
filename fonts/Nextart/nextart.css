@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'NEXTART';
+	src: url('../fonts/nextart.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/nextart.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/nextart.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/nextart.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/nextart.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/nextart.svg#nextart') format('svg'); /* Chrome < 4, Legacy iOS */
+}

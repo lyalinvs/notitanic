@@ -1,0 +1,68 @@
+@use "sass:math";
+// Обнуление стилей
+@import "./reset/_reset";
+
+// Импорт шрифтов
+//@import "./fontsimport.css";
+
+// импорт функций
+/* 
+смотреть инструкцию в файле
+scss/functions/_rem.scss
+*/
+@import "./functions/_rem";
+/* 
+смотреть инструкцию в файле
+scss/functions/_adaptiveValues.scss
+*/
+@import "./functions/_adaptiveValues";
+
+// Шрифт по умолчанию
+$fontFamily: "Arodora Pro";
+$fontSize: rem(18); //rem - это функция переводит из px в rem
+
+// Основные цвета
+$colorFont: #E4E4E4; // Цвет шрифта по умолчанию
+//$colorBg: #f8f9fa; // Цвет background по умолчанию
+$colorBg: linear-gradient(135deg, rgba(44,44,44,1) 0%, rgba(32,32,32,1) 100%, rgba(28,28,28,1) 100%);
+
+
+
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+//$maxWidth: 1920;
+// Ширина ограничивающего контейнера по макету
+$maxWidthContainer: 1170;
+// Общий отступ у контейнера (отступ безопасности)
+// (30 = 15px слева и справа, 0 - нет ограничений)
+$containerPadding: 30;
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Переменные брейкпоинтов
+$extrabig-device: 'only screen and (min-width: 1599.98px)';
+$laptop-device: 'only screen and (min-width: 1199.98px) and (max-width: 1598.98px)';
+$desktop-device: 'only screen and (min-width: 991.98px) and (max-width: 1198.98px)';
+$tablet-device: 'only screen and (min-width: 767.98px) and (max-width: 990.98px)';
+$large-mobile: 'only screen and (max-width: 766.98px)';
+$small-device: 'only screen and (max-width: 478.98px)';
+
+
+// Подключение базовых стилей, шаблонов, вспомогательные классы
+@import "./components/_base";
+
+// Подключение стилей общих элементов проекта
+@import "./components/_common";
+
+// Подключение стилей отдельных блоков
+// header
+@import "./components/_header";
+// Подключение основного блока
+// main
+@import "./components/_main";
+// footer
+@import "./components/_footer";
+
+// Подключение брейкпоинтов
+@import "./components/_breakpoint";

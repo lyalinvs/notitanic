@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'NEXT ART';
+    src: url('NEXTART-SemiBold.eot');
+    src: url('NEXTART-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('NEXTART-SemiBold.woff2') format('woff2'),
+        url('NEXTART-SemiBold.woff') format('woff'),
+        url('NEXTART-SemiBold.svg#NEXTART-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
