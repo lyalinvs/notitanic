@@ -11,48 +11,56 @@
 </head>
 <body>
 	<div class="wrapper">
-		<header class="header">
-			<div class="header__top top-header">
-				<div class="top-header__container">
-					<a href="#" class="top-header__logo">
-						<div class="header-logo">
-							<img src="./img/logo.svg" alt="notitanic">
-							<span>Notitanic</span>
-						</div>
-					</a>
-					<div class="top-header__menu menu">
-						<nav class="menu__body">
-							<ul class="menu__list">
-								<li class="menu__item"><a href="" class="menu__link">Home</a></li>
-								<li class="menu__item"><a href="" class="menu__link">About me</a></li>
-								<li class="menu__item"><a href="" class="menu__link">Portfolio</a></li>
-								<li class="menu__item"><a href="" class="menu__link">Contact</a></li>
-							</ul>
-						</nav>
+		<header class="header header-nav">
+			<div class="header-nav__container">
+                
+				<a href="#" class="header-nav__logo logo-nav">
+					<div class="logo-nav__block">
+						<img src="./img/logo.svg" alt="notitanic">
+						<span>Notitanic</span>
 					</div>
-					<button type="button" class="menu__icon icon-menu"><span></span></button>
-				</div>
-			</div>
+				</a>
+
+				<nav class="header-nav__menu menu-nav">
+					<ul class="menu-nav__list">
+						<li class="menu-nav__item">
+							<a href="" class="menu-nav__link">Home</a>
+						</li>
+						<li class="menu-nav__item">
+							<a href="" class="menu-nav__link">About me</a>
+						</li>
+						<li class="menu-nav__item">
+							<a href="" class="menu-nav__link">Portfolio</a>
+						</li>
+						<li class="menu-nav__item">
+							<a href="" class="menu-nav__link">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				
+            </div>
 		</header>
 		<main class="page">
-			<div class="page">
-				<section class="hero">
-					<div class="hero__container">
-						<div class="hero__info">
-							<span>HELLO</span>
-							<h1>I'M GLEB KOSTRUBOV</h1>
-							<div class="hero__info-text">
-								<p>I've been doing web design, front-end and back-end development for a year now. 
-									Do you need a website design, site layout, or maybe a turnkey website? 
-									Then contact me</p>
-							</div>
-							<button type="button" class="hero__info-button">CONTACT ME</button>
+			<section class="home">
+				<div class="home__container">
+					<div class="home__info">
+						<h2>HELLO</h2>
+						<h1>I'M GLEB KOSTRUBOV</h1>
+						<div class="home__info-text">
+							<p>I've been doing web design, front-end and back-end development for a year now. 
+								Do you need a website design, site layout, or maybe a turnkey website? 
+								Then contact me</p>
 						</div>
-						<div class="hero__ava">
-							<img src="./img/Gleb.png" alt="Gleb">
-						</div>
+						<button type="button" class="home__info-button">CONTACT ME</button>
 					</div>
-				</section>
+					<div class="home__images">
+						<img src="./img/Gleb.png" alt="Gleb">
+					</div>
+				</div>
+			</section>
+
 				<section class="skills">
 					<div class="skills__container">
 						<div class="skills-body">
@@ -117,7 +125,7 @@
 						</div>
 					</div>
 				</section>
-			</div>
+
 		</main>
 		<!--<footer-- class="footer">
 			<div class="footer__container">

@@ -1,50 +1,57 @@
 @media #{$small-device}{ 
 // only screen and (max-width: 478.98px)
+
 }
 
 @media #{$large-mobile}{ 
 // only screen and (max-width: 766.98px)
-body{
-	&.lock{
-		overflow: hidden;
+	.page{
+		z-index: 1;
 	}
-}
-.top-header__container{
-	position: relative;
-}
-.top-header{
-	padding: 0;
-}
-.menu{
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 100vh;
-	overflow: auto; //если в меню (к примеру) пунктов больше, чтобы можно доскроллить до последнего пункта (ведь у body скролл заблокирован)
-	transition: all .3s ease 0s;
-	z-index: 99;
-	&__body{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		height: 100%;
+	.header-nav{
+		z-index: 3;
 	}
-	&__link{
-		color: $colorFont;
-		font-size: rem(45);
+  	body.lock {
+    	overflow: hidden;
+  	}
+	.wrapper{
+		position: relative;  
+  	}
+  	.menu-nav {
+    	position: absolute;
+	    top: 0;
+    	left: -100%;
+	    width: 100%;
+    	height: 100%;
+		padding-top: 6rem;
+    	overflow: auto;
+    	transition: all 0.3s ease 0s;
+	    display: flex;
+    	flex-direction: column;
+	    align-items: center;
+    	text-align: center;
+		background-color: rgb(28, 28, 28);
+		z-index: 2;
+		&__link {
+			font-size: 2.8125rem;
+		}
+		&__list {
+			flex-direction: column;
+			row-gap: 1.5625rem;
+		}
 	}
-	&__list{
-		flex-direction: column;
-		row-gap: rem(25);
-		//padding-top: rem(60);
-	}
-	&.menu-open{
+	.menu-open {
 		left: 0;
 	}
-}
+	.home__info{
+		padding-bottom: rem(50);
+		h2{
+			font-size: rem(35)!important;
+		}
+		h1{
+			font-size: rem(62)!important;
+		}
+	}
 }
 
 @media #{$tablet-device}{ 
@@ -53,21 +60,35 @@ body{
 }
 
 @media only screen and (max-width: 990.98px){
-	.hero{
+	.menu-nav{
+		&__list{
+			column-gap: rem(80);
+		}
+	}
+	.home{
+		&__container{
 			flex-direction: column;
-			padding-top: rem(100);
-		&__info,
-		&__ava{
-			display: block;
+			//padding-top: rem(100);
 		}
 		&__info{
-			span{
-				font-size: rem(48);
+			display: block;
+			flex: 0 0 100%
+		}
+		&__images{
+			flex: 0 0 100%;
+		}
+		&__info{
+			h2{
+				font-size: rem(45);
 			}
 			h1{
-				font-size: rem(72);
+				font-size: rem(70);
 			}
 		}
+	}
+	.card-body{
+		height: rem(200);
+		width: rem(200);
 	}
 }
 

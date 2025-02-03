@@ -1,74 +1,58 @@
-.header{
-	&__top{
-		/*position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;*/
-	}
-}
-.top-header{
+/* HEADER */
+.header{}
+.header-nav{
+	min-height: rem(80);
 	&__container{
+		height: rem(80);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo{}
+	&__menu{}
+}
+.logo-nav{
+	&__block{
 		display: flex;
 		align-items: center;
-		//justify-content: space-between;
-		//gap: rem(20);
-		min-height: rem(80);
-	}
-	&__menu{
-		//flex: 1 1 auto; //что бы расширялось на всю ширину
-	}
-}
-.header-logo{
-	display: flex;
-	align-items: center;
-	column-gap: rem(13);
-	span{
-		color: #fff;
-		font-family: 'Nico Moji';
-		font-size: rem(18);
+		column-gap: rem(13);
+		span{
+			color: #fff;
+			font-family: "Nico Moji";
+			font-size: rem(18);	
+		}	
 	}
 }
-.menu{
-	margin-left: auto;
-	&__body{}
-	&__icon{}
-	&__item{}
+.menu-nav{
 	&__list{
 		display: flex;
-		//далее - если в меню будет много пунктов меню, и что бы они все отображались и слепались друг к другу (что бы было надежно)
 		flex-wrap: wrap;
-		//row-gap: 5px; //на всякий случай (в макете его нет)
-		//адаптивное расстояние между пунктами меню
-		//column-gap: rem(145);
-		@include adaptiveValueModified("column-gap", 991, 80, $maxWidthContainer, 120);
+		column-gap: rem(145);
+		//@include adaptiveValueModified('column-gap', 992, 100, $maxWidthContainer, 145);
 	}
+	&__item{}
 	&__link{
 		position: relative;
-		font-size: rem(18);
-		color: $colorFont;
-		transition: all .25s ease 0s;
+		font-size: em(18);
+		color: #E4E4E4;
+		transition: all 0.25s ease 0s;
 		&::after{
 			position: absolute;
-			content: '';
+			content: "";
 			display: inline-block;
 			bottom: rem(-5);
 			left: 0;
 			width: 0;
 			height: rem(1);
-			background-image: linear-gradient(to right,#e2a300,#e29500);
+			background-image: linear-gradient(to right, #e2a300, #e29500);
 			transition: all 0.3s ease 0s;
 		}
-		&:hover{
-			&::after{
-				width: 90%;
-				transform: 100%;
-			}
-		}
+		&:hover::after{
+			width: 90%;
+			transform: 100%;	
+		}	
 	}
 }
-
-// Burger
-
 .icon-menu{
 	display: none;
 	@media #{$large-mobile} {
@@ -77,8 +61,7 @@
 		margin-left: auto;
 		//т.к. бургер это flex элемент, то надо указывать ширину так, а не через width и тогда бургер при уменьшении экрана не будет сужаться
 		flex: 0 0 30px; 
-		//width: 30px;
-		height: 18px;
+		height: rem(18);
 		cursor: pointer;
 		z-index: 5;
 		span,
@@ -89,7 +72,7 @@
 			left: 0;
 			position: absolute;
 			width: 100%;
-			height: 2px;
+			height: rem(2);
 			background-color: $colorFont;
 		}
 		&::before{
@@ -122,4 +105,4 @@
 			}
 		}
 	}
-}
+}	
