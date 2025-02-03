@@ -23,6 +23,7 @@ body{
 	height: 100vh;
 	overflow: auto; //если в меню (к примеру) пунктов больше, чтобы можно доскроллить до последнего пункта (ведь у body скролл заблокирован)
 	transition: all .3s ease 0s;
+	z-index: 99;
 	&__body{
 		display: flex;
 		flex-direction: column;
