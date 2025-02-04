@@ -17,6 +17,9 @@ scss/functions/_adaptiveValues.scss
 */
 @import "./functions/_adaptiveValues";
 
+// Миксины
+@import "./mixins/_breakpoints";
+
 // Шрифт по умолчанию
 $fontFamily: "Arodora Pro";
 $fontSize: rem(18); //rem - это функция переводит из px в rem

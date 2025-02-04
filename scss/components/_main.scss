@@ -1,5 +1,5 @@
 /* HOME */
-.home{
+/*.home{
 	padding-top: rem(145-80); //80 - min-height .top-header__container
 	&__container{
 		position: relative;
@@ -50,6 +50,68 @@
 		}
 	}
 }
+*/
+.home__container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 5rem);
+	.home__info {
+		flex: 1 1 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		/*row-gap: rem(20);*/
+		h1 {
+			font-family: "NEXTART-bold";
+			font-size: rem(38);
+			padding: rem(18) 0;
+		}
+		h2 {
+			font-family: "NEXTART-semibold";
+			font-size: rem(30);
+		}
+		&-text {
+			/*width: rem(250);*/
+			padding-bottom: 1.625rem;
+		}
+		&-button{
+			display: block;
+			width: rem(200);
+			height: rem(47);
+			background-color: orange;
+			color: #000;
+			border-radius: rem(6);
+			font-family: 'NEXTART-bold';
+			filter: drop-shadow(0px 2px 13px rgba(226, 158, 0, 48%));
+			transition: color .25s ease-in-out 0s;
+			&:hover{
+				color: $colorFont;
+			}
+		}
+	}
+	.home__images {
+		/* display: flex;*/
+		 flex: 1 1 100%;
+		 /*justify-content: center;*/
+	}
+
+
+}
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
 /* SKILLS */
 .skills{
 	background-color: #3e3e3e;

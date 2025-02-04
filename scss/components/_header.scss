@@ -1,108 +1,119 @@
 /* HEADER */
-.header{}
-.header-nav{
+.header-nav {
 	min-height: rem(80);
-	&__container{
+	&__container {
 		height: rem(80);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
-	&__logo{}
-	&__menu{}
 }
-.logo-nav{
-	&__block{
+.logo-nav {
+	z-index: 9;
+	&__block {
 		display: flex;
 		align-items: center;
 		column-gap: rem(13);
-		span{
+		span {
 			color: #fff;
 			font-family: "Nico Moji";
-			font-size: rem(18);	
-		}	
+			font-size: rem(18);
+		}
 	}
 }
-.menu-nav{
-	&__list{
+.wrapper {
+	position: relative;
+}
+.menu-nav {
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	transition: all 0.3s ease 0s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: rgb(28, 28, 28);
+	padding: 0 rem(30); /*отступ безопасности*/
+	&__list {
 		display: flex;
-		flex-wrap: wrap;
-		column-gap: rem(145);
-		//@include adaptiveValueModified('column-gap', 992, 100, $maxWidthContainer, 145);
+		flex-direction: column;
+		row-gap: rem(25);
 	}
-	&__item{}
-	&__link{
+	&__link {
 		position: relative;
-		font-size: em(18);
+		font-size: rem(45);
 		color: #E4E4E4;
 		transition: all 0.25s ease 0s;
-		&::after{
+		&::after {
 			position: absolute;
 			content: "";
 			display: inline-block;
-			bottom: rem(-5);
+			bottom: -0.3125rem;
 			left: 0;
 			width: 0;
-			height: rem(1);
+			height: 0.0625rem;
 			background-image: linear-gradient(to right, #e2a300, #e29500);
 			transition: all 0.3s ease 0s;
 		}
-		&:hover::after{
+		&:hover::after {
 			width: 90%;
-			transform: 100%;	
-		}	
+			transform: 100%;
+		}
 	}
 }
-.icon-menu{
-	display: none;
-	@media #{$large-mobile} {
-		display: block;
-		position: relative;
-		margin-left: auto;
-		//т.к. бургер это flex элемент, то надо указывать ширину так, а не через width и тогда бургер при уменьшении экрана не будет сужаться
-		flex: 0 0 30px; 
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after{
-			content: "";
-			transition:  all .3s ease 0s;
-			left: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: $colorFont;
+.menu-open {
+	left: 0;
+}
+/* бургер */
+.icon-menu {
+	display: block;
+	position: relative;
+	flex: 0 0 30px;
+	height: 1.125rem;
+	cursor: pointer;
+	z-index: 9;
+	span,
+	&::before,
+	&::after {
+		content: "";
+		transition: all 0.3s ease 0s;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 0.125rem;
+		background-color: #E4E4E4;
+	}
+	&::before {
+		top: 0;
+	}
+	&::after {
+		bottom: 0px;
+	}
+	span {
+		top: calc(50% - 1px);
+	}
+	&:hover span,
+	&:hover::before,
+	&:hover::after {
+		background-color: #e29500;
+	}
+	&.menu-open{
+		span {
+			transform: scale(0);
 		}
-		&::before{
-			top: 0;
-		}
-		&::after{
-			bottom: 0px;
-		}
-		span{
+		&::before {
+			transform: rotate(-45deg);
 			top: calc(50% - 1px);
 		}
-		&.menu-open{//из бургера делается крестик
-			span{
-				transform: scale(0);
-			}
-			&::before{
-				transform: rotate(-45deg);
-				top: calc(50% - 1px);
-			}
-			&::after{
-				transform: rotate(45deg);
-				bottom: calc(50% - 1px);
-			}
-		}
-		&:hover{
-			span,
-			&::before,
-			&::after{
-				background-color: #e29500;
-			}
+		&::after {
+			transform: rotate(45deg);
+			bottom: calc(50% - 1px);
 		}
 	}
-}	
+}
+/* ./бургер */
