@@ -4,3 +4,9 @@ $(document).ready(function(event){
 		$('body').toggleClass('lock');//при открытом меню блокируется прокрутка
 	});
 });
+
+$(document).ready(function(event){
+	$('.spoller__title').click(function(event){ // при клике в блоке about me на маленьких экранах где текст
+		$(this).toggleClass('openAbout').next().slideToggle(300);
+	})
+})

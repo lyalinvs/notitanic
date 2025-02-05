@@ -17,7 +17,7 @@
 			font-size: rem(40)!important;
 		}
 		&-text {
-			width: rem(600);
+			//width: rem(600);
 			//padding-bottom: 1.625rem;
 		}
 	}
@@ -30,8 +30,17 @@
 	}
 }
 @include media-breakpoint-min-lg{
-	
-
+	.icon-menu{
+		display: none;
+	}
+	.menu-nav__list {
+		flex-direction: row;
+		row-gap: 0;
+		column-gap: 145px;
+	}
+	.menu-nav__link { 
+		font-size: 18px;
+	}
 	.home__info{
 		h1{
 			font-size: rem(70)!important;
@@ -44,15 +53,22 @@
 @include media-breakpoint-min-xl{
 	.home__container {
 		flex-direction: row;
+		row-gap: 0!important;
 	}
 	.home__info{
-		flex: 1 1 50%;
+		flex: 0 0 auto;
+		width: 50%!important;
 	}
 	.home__images{
-		flex: 1 1 50%;
+		flex: 0 0 auto;
+		width: 50%!important;
 		img{
 			max-width: 100%;
 			margin-top: auto;
 		}
+	}
+	.card-body{
+		height: rem(270);
+		width: rem(270);
 	}
 }
