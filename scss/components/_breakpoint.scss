@@ -7,6 +7,12 @@
 			font-size: rem(34)!important;
 		}
 	}
+	.about-content {
+		width: 450px;
+	}
+	.about-content__title{
+		font-size: rem(35);
+	}
 }
 @include media-breakpoint-min-md{
 	.home__info{
@@ -26,6 +32,14 @@
 	    justify-content: center;
 		img{
 			max-width: 80%;
+		}
+	}
+	.about-content{
+		&__title{
+			font-size: rem(48);
+		}
+		&__text{
+			font-size: rem(20);
 		}
 	}
 }
@@ -70,5 +84,48 @@
 	.card-body{
 		height: rem(270);
 		width: rem(270);
+	}
+	.about-content {
+		width: 496px;
+		padding: rem(65) rem(73) rem(69) rem(73);
+		&__title{
+			position: absolute;
+			top: rem(-25);
+		}
+	}
+	.about-images {
+		&__photo-one {
+			display: block;
+			position: absolute;
+			top: rem(-48);
+			left: rem(-300);
+			z-index: 9;
+			border-width: rem(20);
+			border-style: solid;
+			border-color: #2c2c2c;
+			border-radius: rem(14);
+		}
+		&__photo-two {
+			display: block;
+			position: absolute;
+			z-index: 9;
+			bottom: rem(-43);
+			left: rem(-270);
+			border-width: rem(20);
+			border-style: solid;
+			border-color: #2c2c2c;
+			border-radius: rem(14);
+		}
+		&__photo-three {
+			display: block;
+			position: absolute;
+			z-index: 9;
+			top: rem(158);
+			right: rem(-300);
+			border-width: rem(20);
+			border-style: solid;
+			border-color: #2c2c2c;
+			border-radius: rem(14);
+		}
 	}
 }

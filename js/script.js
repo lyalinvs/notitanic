@@ -6,7 +6,8 @@ $(document).ready(function(event){
 });
 
 $(document).ready(function(event){
-	$('.spoller__title').click(function(event){ // при клике в блоке about me на маленьких экранах где текст
-		$(this).toggleClass('openAbout').next().slideToggle(300);
-	})
-})
+	$('.about-content__spoiler').click(function(event){
+		$('.about-content__text--spoiler').toggleClass('open-text');
+		$('.about-content__spoiler').html('(Скрыть)');
+	});
+});

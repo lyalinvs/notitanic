@@ -56,7 +56,7 @@
 .skills {
 	background-color: #3e3e3e;
 	padding-top: rem(113);
-	padding-bottom: rem(130);
+	padding-bottom: rem(80);
 }
 
 .skills-body {
@@ -97,43 +97,80 @@
 /* ABOUT ME */
 .about {
 	background-color: #3e3e3e;
+	padding-top: rem(80);
+	padding-bottom: rem(160);
 }
 
-.about__container {}
-
-.about-bg {
-	display: none;
+.about__container{
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.about-bg { 
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 .about-content {
+	position: relative;
+	display: block;
+	z-index: 3;
+	background: #2c2c2c;
+	border-radius: 14px;
+	width: 400px;
+	//padding: rem(65) rem(73) rem(69) rem(73);
 	&__title {
+		//position: absolute;
+		//top: rem(-25);
 		font-family: 'NEXTART';
 		font-weight: normal!important;
-		font-size: rem(48);
-		text-align: center;
+		font-size: rem(20);
+		//text-align: center;
 		padding-bottom: rem(20);
 	}
 	&__text {
-		font-size: rem(18);
+		display: inline;
+		font-size: rem(16);
+		letter-spacing: 0.01em;
 	}
 }
 
 .about-images {
-	display: none;
-	&__photo-one {}
-	&__photo-two {}
-	&__photo-three {}
+	&__photo-one {
+		display: none;
+	}
+	&__photo-two {
+		display: none;
+	}
+	&__photo-three {
+		display: none;
+	}
 }
 
-.spoller{
-	&__title{
-		cursor: pointer;
-		color: #e2a300;
-		font-size: rem(20);
-		font-weight: 600;
-	}
-	&__arrow{}
-	&__body{
+.about-content__spoiler{ /****************************************/
+	cursor: pointer;
+	font-size: 16px;
+	/*font-weight: 600;*/
+	color: #e2a300;
+	transition: .3s ease-in-out 0s;
+}
+.about-content__text--spoiler{ /****************************************/
+	display: none;
+}
+.about-content__text--spoiler.open-text{
+	display: inline;
+	font-size: 16px;
+	transition: .3s ease-in-out 0s;
+}
+
+
+@media (min-width: 991.98px) { /****************************************/
+	.about-content__spoiler{
 		display: none;
+	}
+	.about-content__text--spoiler{
+		display: inline;
 	}
 }
