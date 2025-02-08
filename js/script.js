@@ -5,9 +5,48 @@ $(document).ready(function(event){
 	});
 });
 
-$(document).ready(function(event){
-	$('.about-content__spoiler').click(function(event){
-		$('.about-content__text--spoiler').toggleClass('open-text');
-		$('.about-content__spoiler').html('(Скрыть)');
-	});
+//для блока About
+$(document).ready(function(){
+	$('.about-content__toggle').click(function(){
+		$('.about-content__text').toggleClass('hide-text');	
+		if ($('.about-content__text').hasClass('hide-text')) {
+			$('.about-content__toggle').html('Подробнее');
+		} else {
+			$('.about-content__toggle').html('Скрыть');
+		}		
+		return false;
+	});				
+});
+
+$(document).ready(function() {
+  function checkWidth() {
+    var windowWidth = $('body').innerWidth(),
+        elem = $(".about-content__text"); 
+    if(windowWidth > 768){
+      elem.removeClass('hide-text');
+    }
+    else{
+      elem.addClass('hide-text');
+    }
+  }
+
+  checkWidth(); // проверит при загрузке страницы
+
+  $(window).resize(function(){
+    checkWidth(); // проверит при изменении размера окна
+  });
+});
+
+//swiper
+const swiper = new Swiper('.swiper', {
+	direction: 'horizontal',
+	loop: true,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	},
+	effect: 'fade',
+	fadeEffect:{
+		crossFade: true
+	},
 });

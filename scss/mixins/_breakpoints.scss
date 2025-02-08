@@ -51,9 +51,16 @@
 		@content;
 	}
 }
-
+/*
 @mixin media-breakpoint-max-xl{
 	@media (max-width: 1199.98px){
+		@content;
+	}
+}
+*/
+
+@mixin media-breakpoint-max-xl{
+	@media (max-width: rem($maxWidthContainer)){
 		@content;
 	}
 }

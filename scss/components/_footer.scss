@@ -1,17 +1,19 @@
 .footer{
-	height: 2.25rem;
+	//height: 2.25rem;
+	//height: rem(238);
+	background-color: #3e3e3e;
 	&__container{
-		height: 100%;
+		//height: 100%;
 		span{
-			font-size: 0.75rem;
-			font-weight: 500;
+			//font-size: 0.75rem;
+			//font-weight: 500;
 		}
 	}
 	&__copyright{ /*отцентрировать copyright по середине и центру*/
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		//height: 100%;
+		//display: flex;
+		//flex-direction: column;
+		//align-items: center;
+		//justify-content: center;
 	}
 }

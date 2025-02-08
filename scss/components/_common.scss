@@ -18,7 +18,7 @@
 */
 [class*="__container"]{
 	margin: 0 auto;
-	padding: 0 rem($containerPadding); /* отступы безопасности */
+	padding: 0 rem($containerPadding / 2); /* отступы безопасности */
     max-width: rem($containerWidth);
-    box-sizing: content-box;
+    /*box-sizing: content-box;*/
 }
