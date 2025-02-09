@@ -1,16 +1,30 @@
 /* HOME */
+
 .home__container {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	row-gap: 20px;
-	/*height: calc(100vh - 5rem);*/
 
 	.home__info {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
 		flex: 0 0 auto;
 		width: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
 		justify-content: center;
 
 		h1 {
@@ -25,7 +39,6 @@
 		}
 
 		&-text {
-			/*width: rem(250);*/
 			padding-bottom: 1.625rem;
 		}
 
@@ -37,7 +50,10 @@
 			color: #000;
 			border-radius: rem(6);
 			font-family: 'NEXTART-bold';
+			-webkit-filter: drop-shadow(0px 2px 13px rgba(226, 158, 0, 48%));
 			filter: drop-shadow(0px 2px 13px rgba(226, 158, 0, 48%));
+			-webkit-transition: color .25s ease-in-out 0s;
+			-o-transition: color .25s ease-in-out 0s;
 			transition: color .25s ease-in-out 0s;
 
 			&:hover {
@@ -47,6 +63,8 @@
 	}
 
 	.home__images {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 auto;
 		flex: 0 0 auto;
 		width: 100%;
 	}
@@ -60,23 +78,40 @@
 }
 
 .skills-body {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	gap: 20px;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 
 .card-body {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	height: rem(220);
 	width: rem(220);
 	padding: rem(58) 0 rem(50) 0;
 	background-color: #2A2A2A;
 	border-radius: rem(29);
+	-webkit-filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 47%));
 	filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 47%));
 
 	&__text {
@@ -101,16 +136,21 @@
 	padding-bottom: rem(160);
 }
 
-.about__container{
+.about__container {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
-.about-bg { 
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 2;
+
+.about-bg {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
 }
 
 .about-content {
@@ -121,26 +161,32 @@
 	border-radius: 14px;
 	width: 400px;
 	padding: rem(25) rem(25);
-	filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.47)); 
+	-webkit-filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.47));
+	filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.47));
+
 	&__title {
 		position: absolute;
 		top: rem(-10);
 		font-family: 'NEXTART';
-		font-weight: normal!important;
+		font-weight: normal !important;
 		font-size: rem(20);
-		//text-align: center;
 		padding-bottom: rem(20);
 	}
+
 	&__text {
 		overflow: hidden;
 		position: relative;
-		p{
+
+		p {
 			font-size: 1rem;
-  			letter-spacing: 0.01em;
+			letter-spacing: 0.01em;
 		}
-		&.hide-text{
-			height: 200px; /*высота видимого блока*/
-			&:after{
+
+		&.hide-text {
+			height: 200px;
+
+			/*высота видимого блока*/
+			&:after {
 				content: "";
 				display: block;
 				height: 100%;
@@ -151,7 +197,8 @@
 			}
 		}
 	}
-	&__toggle{
+
+	&__toggle {
 		color: #e29500;
 		font-size: rem(18);
 	}
@@ -161,21 +208,24 @@
 	&__photo-one {
 		display: none;
 	}
+
 	&__photo-two {
 		display: none;
 	}
+
 	&__photo-three {
 		display: none;
 	}
 }
 
 /* PORTFOLIO */
-.portfolio{}
-.portfolio__container{
+
+.portfolio__container {
 	padding-top: rem(100);
 	padding-bottom: rem(150);
 }
-.portfolio__title{
+
+.portfolio__title {
 	font-family: 'NEXTART';
 	font-size: rem(48);
 	font-weight: normal;
@@ -183,64 +233,55 @@
 	padding-bottom: rem(50);
 	text-align: center;
 }
+
 /* слайды */
-.swiper{}
-.image-slider{
-	&__wrapper{}
-	&__slide{
+.image-slider {
+	&__slide {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		row-gap: rem(20);
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
 		justify-content: center;
 	}
-	&__image{
-		//width: 80%;
+
+	&__image {
 		padding: 0 rem(10);
-		img{
-			//width: 80%;
-		}
 	}
-	&__description{}
-	&__title{
+
+	&__title {
 		font-size: rem(20);
 		text-align: left;
 		padding: rem(16) 0;
 	}
-	&__text{
-		//font-size: rem(16);
+
+	&__text {
 		display: none;
 	}
-	&__text-more{
+
+	&__text-more {
 		color: #e29500;
 		font-size: rem(18);
 	}
 }
-.swiper-wrapper{}
-.swiper-slide{}
-.swiper-button-prev{
-	/*background-image: url('../../img/prev.png');
-	background-repeat: no-repeat;
-  	background-size: 100% auto;
-  	background-position: center;*/
-	width: rem(60)!important;
-	img{
-		//height: rem(50);
-		//width: rem(60)!important;
-	}
-	&::after{
+
+.swiper-button-prev {
+	width: rem(60) !important;
+
+	&::after {
 		display: none;
 	}
 }
-.swiper-button-next{
-	/*background-image: url('../../img/next.png');
-	background-repeat: no-repeat;
-  	background-size: 100% auto;
-  	background-position: center;*/
-	width: rem(60)!important;
-	img{
-		//height: rem(50);
-		width: rem(60)!important;
+
+.swiper-button-next {
+	width: rem(60) !important;
+
+	img {
+		width: rem(60) !important;
 	}
-	&::after{
+
+	&::after {
 		display: none;
 	}
 }

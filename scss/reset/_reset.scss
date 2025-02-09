@@ -1,4 +1,4 @@
-/* Reset and base styles  */
+/* Reset */
 * {
 	padding: 0px;
 	margin: 0px;
@@ -8,19 +8,18 @@
 *::before,
 *::after {
 	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
 	   		box-sizing: border-box;
 }
 html{
-	scroll-behavior: smooth; /*плавная прокрутка*/
+	scroll-behavior: smooth;
 }
-/* Links */
+
 a, a:hover, a:link, a:visited  {
     text-decoration: none;
 }
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
-/* Common */
+
 aside, nav, footer, header, section, main {
 	display: block;
 }
@@ -53,7 +52,7 @@ img, svg {
 address {
   font-style: normal;
 }
-/* Form */
+
 input, textarea, button, select {
 	font-family: inherit;
     font-size: inherit;
@@ -64,9 +63,9 @@ input::-ms-clear {
 	display: none;
 }
 button, input[type="submit"] {
-    /*display: inline-block;*/
 	display: button;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     background-color: transparent;
     background: none;
     cursor: pointer;
