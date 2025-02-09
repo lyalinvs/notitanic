@@ -154,7 +154,7 @@ body {
   line-height: 1.5;
   font-size: 1.125rem;
   color: #E4E4E4;
-  background: linear-gradient(135deg, rgb(44, 44, 44) 0%, rgb(32, 32, 32) 100%, rgb(28, 28, 28) 100%);
+  background: #2C2C2C;
 }
 
 /* оболочка */
